@@ -1,0 +1,68 @@
+# ALL bert based
+
+1. Enhancing Word Sense Disambiguation through contextual embedding and optimization techniques
+bert, ELMo, bidirectional LSTM
+For morethan 15000 count - accuracy = 89.23, 91.11, 93.55
+
+
+2. Assessing the Signicance of Encoded Information in Contextualized
+Representations to Word Sense Disambiguation
+CWE, bert
+accuracy - 0.81, 0.84 {f1-score}
+
+
+3. SENSEMBERT: Context-Enhanced Sense Embeddings for Multilingual Word Sense Disambiguation
+sensembert - Metrices - ALL- 81.1
+
+
+4. With More Contexts Comes Better Performance:
+Contextualized Sense Embeddings for All-Round Word Sense
+Disambiguation
+========================================
+Model 		ALLLFS 		ALLLFW = 
+========================================
+LMMS 		61.6 		74.8   =
+GlossBERT 	62.0 		75.6   =
+========================================
+ARES 		65.2 		81.1   =
+========================================
+
+
+# ALL SensebERT based
+1. Learning Sense-Specic Static Embeddings using Contextualised Word Embeddings as a Proxy
+Glossbert - 76.1
+sensebert - 72.1
+
+2. Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, pages 4656–4667
+July 5 - 10, 2020. c©2020 Association for Computational Linguistics
+4656
+SenseBERT: Driving Some Sense into BERT
+------------------------------------------------
+				Word in Context
+ELMo† 				57.7
+BERT sense embeddings 		†† 67.7
+BERT LARGE			69.6
+RoBERTa‡‡ 			69.9
+KnowBERT			70.9
+SenseBERT 			72.1
+------------------------------------------------
+
+3. ContrastWSD: Enhancing Metaphor Detection with Word Sense Disambiguation Following the Metaphor Identication Procedure
+ContrastWSD, RoBERTa, Metaphor Identication Procedure (MIP)
+----------------|-----------------------|-----------------|
+Model 		|	F1 - All 	|	F1 - Conv |
+MPD_WSD 	|	63.10 		|	65.90     |
+ContrastWSD (β) |	73.42 		|	72.31     |
+ContrastWSD 	|	73.84 		|	73.07     |
+----------------|-----------------------|-----------------|
+
+
+# ALL XLNet based
+1. Assessing the Signicance of Encoded Information in Contextualized
+Representations to Word Sense Disambiguation
+____________________________________________________________________________
+Always Keep your Target in Mind: Studying Semantics and Improving Performance of Neural Lexical Substitution
+
+____________________________________________________________________________
+
+# for sentiment analysis
