@@ -1,0 +1,35 @@
+Semi-supervised Approaches for SensEmBERT
+
+SensEmBERT, while powerful, requires a significant amount of labeled data for training, which can be a bottleneck. Here are some semi-supervised approaches you can explore for your research project:
+
+1. Self-training:
+
+This method iteratively utilizes the model itself to generate pseudo-labels for unlabeled data. Here's the workflow:
+    * Train SensEmBERT on a small set of labeled data.
+    * Use the trained model to predict senses for unlabeled data points.
+    * Select the most confident predictions (e.g., those above a certain threshold probability) and assign them as pseudo-labels.
+    * Retrain SensEmBERT incorporating both the original labeled data and the newly generated pseudo-labeled data.
+    * Repeat steps 2-4 for a few iterations to progressively improve the model's accuracy.
+
+2. Teaching Models with Limited Labels (TMLL):
+
+This approach leverages unlabeled data to learn a distance metric between word embeddings that aligns with semantic similarity. Here's the idea:
+    * Use unlabeled data to identify word pairs that are likely to have similar meanings (e.g., synonyms or words appearing frequently together).
+    * Train a separate model on this data to learn a distance metric that captures semantic closeness between word embeddings.
+    * Integrate this distance metric into the SensEmBERT training process to guide the model towards assigning similar senses to words with close embeddings (as determined by the TMLL-learned metric).
+
+3. Co-training with Multiple Representations:
+
+This method utilizes two separate SensEmBERT models trained on different data representations of the same text. Here's how it works:
+    * Train one SensEmBERT model on the original text data and another on a different representation, such as part-of-speech tags or dependency parsing information.
+    * During training, each model uses the predictions from the other model on unlabeled data points to guide its own learning process. This creates a synergy where each model refines the other's predictions on the unlabeled data.
+
+4. Uncertainty Sampling:
+
+This approach focuses on strategically selecting the most informative unlabeled data points for labeling. Here's the process:
+    * Train SensEmBERT on a small set of labeled data.
+    * Use the trained model to predict senses for all unlabeled data points.
+    * Identify data points where the model is most uncertain about the sense prediction (e.g., high prediction probability for multiple senses).
+    * Manually label these high-uncertainty points as they are likely to be most beneficial for improving the model's overall accuracy.
+
+These are some promising semi-supervised learning techniques that can be applied to SensEmBERT to leverage the power of unlabeled data and potentially improve WSD performance without requiring a massive amount of labeled data.  

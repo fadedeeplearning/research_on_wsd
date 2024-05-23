@@ -1,0 +1,47 @@
+I'll be doing self-training on SemsEmbert that will perform State-Of-The-Art results by simultaneously performing pseudo-labels for unlabelled data.
+
+Self-training:
+
+This method iteratively utilizes the model itself to generate pseudo-labels for unlabeled data.Here's the workflow:
+	1. Train SensEmBERT on a small set of labeled data.
+	
+	2. Use the trained model to predict senses for unlabeled data points.
+
+	3. Select the most confident predictions (e.g., those above a certain 				threshold probability) and assign them as pseudo-labels.
+
+	4. Retrain SensEmBERT incorporating both the original labeled data and the 	newly generated pseudo-labeled data.
+
+	5. Repeat steps 2-4 for a few iterations to progressively improve the model's accuracy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Self-training:
+
+This is a popular choice for semi-supervised learning. Here's how it can be applied:
+
+    Train SenseBERT on a small set of labeled WSD data.
+    Use the trained model to predict senses for a large amount of unlabeled data.
+    Select the most confident predictions (e.g., those above a certain probability threshold) from the unlabeled data.
+    Assign these high-confidence predictions as pseudo-labels.
+    Retrain SenseBERT by incorporating both the original labeled data and the newly generated pseudo-labeled data.
+    Repeat steps 2-4 for a few iterations.
+
+With each iteration, the model leverages the (hopefully) accurate pseudo-labels from unlabeled data to improve its ability to disambiguate words in future unseen examples.
